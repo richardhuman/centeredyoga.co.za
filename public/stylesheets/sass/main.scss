@@ -1,0 +1,129 @@
+
+
+$font_size: 1.1em;   
+                            
+$colour_lightblue: #d5edff; //#c3f3ff;
+$colour_blue: #2F4F82;
+$colour_header_fg: white;
+
+html {}
+body {
+
+    font-family: 'Archer', 'HelveticaNeue', Arial, Verdana, sans-serif;
+    font-variant: normal;
+    font-size: $font_size;
+    color: $colour_blue;   
+    background-color: $colour_lightblue;
+          
+
+}            
+
+a:link, a:visited, a:active {
+	text-decoration: none;
+    color: $colour_blue;	
+}
+
+a:hover {
+    color: $colour_blue;
+}  
+
+                        
+$header_height: 100px;
+
+.container {
+    max-width: 80%; 
+    margin: 0 auto; 
+    position: relative;
+    
+    .header {                         
+        position: relative;
+        height: $header_height; 
+        /*line-height: $header_height;*/
+        
+        background-color: $colour_blue;
+        color: $colour_header_fg;   
+        a:link, a:visited, a:active {
+            color: $colour_header_fg;	
+        }
+                                    
+        h1 {          
+            font-size: $font_size * 3;
+            /*display: block;*/
+            /*padding: 30px 10px;*/
+            
+            position: absolute;
+            bottom: 0; 
+            left: 10px;          
+            /*float: left;*/
+                        
+             
+        } 
+        
+        ul.nav {       
+            position: absolute;
+            bottom: 13px;
+            right:10px;
+            /*float: right;*/
+            /*padding: 55px 10px;*/
+            li {
+                display: inline;
+                padding: 0 10px;
+            }                
+            
+        }
+        
+            
+    }      
+    
+    $front_page_width: 460px;
+    
+    .content {
+        
+        img.front_page {
+            
+            display: block; 
+            width: $front_page_width;
+            height: $front_page_width / 1.6;
+            margin: 0 auto;
+            /*padding-top: 10px;*/
+            
+            border-bottom: $colour_blue dotted 2px;
+            
+        }  
+        
+        div.front_page_blurb { 
+            width: $front_page_width;
+            padding-top: 20px;
+            margin: 0 auto;   
+        
+            ul {
+                li {
+                    padding-bottom: 5px;
+                }           
+                /*margin-bottom: 5px;*/
+                
+                
+                list-style: disc;
+                list-style-position: inside; 
+                margin-left: 0;
+                padding-left: 0.9em;
+                text-indent: -0.9em;  
+            }
+
+        }    
+        
+        h2 {
+            /*color: red;*/
+        }   
+        
+        p {
+            margin-bottom :10px;
+        }
+        
+    
+    }
+    
+    
+}       
+
+  
