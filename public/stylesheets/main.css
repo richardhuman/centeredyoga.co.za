@@ -3,65 +3,112 @@ body {
   font-variant: normal;
   font-size: 1.1em;
   color: #2f4f82;
-  background-color: #d5edff; }
+  background-image: url(/images/bg.jpg); }
 
 a:link, a:visited, a:active {
   text-decoration: none;
+  border-bottom: #2f4f82 dotted 1px;
   color: #2f4f82; }
 
 a:hover {
   color: #2f4f82; }
 
+a.selected-link {
+  border-bottom: white dotted 1px; }
+
 .container {
-  max-width: 80%;
+  max-width: 800px;
   margin: 0 auto;
-  position: relative; }
+  position: relative;
+  background-color: white;
+  -webkit-box-shadow: 0 0 20px #888888;
+  -moz-box-shadow: 0 0 20px #888888;
+  box-shadow: 0 0 20px #888888;
+  filter: progid:DXImageTransform.Microsoft.Shadow(Color='gray', strength=5, direction=135);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Color='gray', strength=5, direction=135)"; }
   .container .header {
     position: relative;
     height: 100px;
-    /*line-height: $header_height;*/
     background-color: #2f4f82;
     color: white; }
     .container .header a:link, .container .header a:visited, .container .header a:active {
       color: white; }
     .container .header h1 {
       font-size: 3.3em;
-      /*display: block;*/
-      /*padding: 30px 10px;*/
       position: absolute;
       bottom: 0;
-      left: 10px;
-      /*float: left;*/ }
+      left: 30px; }
     .container .header ul.nav {
       position: absolute;
       bottom: 13px;
-      right: 10px;
-      /*float: right;*/
-      /*padding: 55px 10px;*/ }
+      right: 30px; }
       .container .header ul.nav li {
         display: inline;
-        padding: 0 10px; }
-  .container .content img.front_page {
-    display: block;
-    width: 460px;
-    height: 287.5px;
-    margin: 0 auto;
-    /*padding-top: 10px;*/
-    border-bottom: #2f4f82 dotted 2px; }
-  .container .content div.front_page_blurb {
-    width: 460px;
-    padding-top: 20px;
-    margin: 0 auto; }
-    .container .content div.front_page_blurb ul {
-      /*margin-bottom: 5px;*/
-      list-style: disc;
-      list-style-position: inside;
-      margin-left: 0;
-      padding-left: 0.9em;
-      text-indent: -0.9em; }
-      .container .content div.front_page_blurb ul li {
-        padding-bottom: 5px; }
-  .container .content h2 {
-    /*color: red;*/ }
-  .container .content p {
-    margin-bottom: 10px; }
+        padding: 0 5px; }
+  .container .content {
+    margin: 50px auto;
+    padding-bottom: 50px; }
+    .container .content img.front_page {
+      display: block;
+      width: 460px;
+      height: 287.5px;
+      margin: 0 auto;
+      border-bottom: #2f4f82 dotted 2px; }
+    .container .content div.front_page_blurb {
+      width: 460px;
+      padding-top: 20px;
+      margin: 0 auto; }
+      .container .content div.front_page_blurb ul {
+        list-style: disc;
+        list-style-position: inside;
+        margin-left: 0;
+        padding-left: 0.9em;
+        text-indent: -0.9em; }
+        .container .content div.front_page_blurb ul li {
+          padding-bottom: 5px; }
+    .container .content h2 {
+      font-weight: bold;
+      margin-bottom: 10px; }
+    .container .content h3 {
+      font-weight: bold; }
+    .container .content p {
+      margin-bottom: 10px; }
+    .container .content div.page_content {
+      width: 550px;
+      margin: 0px auto; }
+      .container .content div.page_content table {
+        border-spacing: 0px 0px;
+        border-collapse: collapse;
+        margin-bottom: 20px; }
+        .container .content div.page_content table tr th, .container .content div.page_content table tr td {
+          width: 20%;
+          border: #2f4f82 solid 1px; }
+        .container .content div.page_content table tr th {
+          text-align: center; }
+        .container .content div.page_content table tr td {
+          padding-left: 5px; }
+      .container .content div.page_content div.location {
+        position: relative;
+        float: left;
+        padding-bottom: 10px; }
+        .container .content div.page_content div.location div.location-key {
+          position: relative;
+          float: left;
+          width: 20px;
+          height: 20px;
+          border: #2f4f82 solid 1px; }
+        .container .content div.page_content div.location div.location-text {
+          width: 520px;
+          position: relative;
+          float: left;
+          margin-left: 5px; }
+      .container .content div.page_content .location-hhh {
+        background-color: #d5edff; }
+      .container .content div.page_content .inline_heading {
+        display: inline; }
+      .container .content div.page_content ul.principles {
+        list-style-type: decimal;
+        list-style-position: outside;
+        margin-left: 1.1em; }
+        .container .content div.page_content ul.principles li {
+          margin-bottom: 10px; }

@@ -59,6 +59,8 @@ CenterdyogaCoZa::Application.routes.draw do
   match "classes" => "pages#classes"
   match "about" => "pages#about"
   match "contact" => "pages#contact"
+  match "principles" => "pages#principles"
+  match "private_lessons" => "pages#private_lessons"
   
   root :to => "pages#index"
 end

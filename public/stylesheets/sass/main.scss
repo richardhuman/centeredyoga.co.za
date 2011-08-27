@@ -5,41 +5,60 @@ $font_size: 1.1em;
 $colour_lightblue: #d5edff; //#c3f3ff;
 $colour_blue: #2F4F82;
 $colour_header_fg: white;
+                 
+@mixin rounded-corners($radius) {
+    border-radius: $radius;
+    -moz-border-radius: $radius;
+    -webkit-border-radius: $radius;
+}                                         
 
-html {}
+@mixin shadow($value) { 
+    -webkit-box-shadow: 0 0 $value #888;
+    -moz-box-shadow: 0 0 $value #888;
+    box-shadow: 0 0 $value #888;
+    
+    filter: progid:DXImageTransform.Microsoft.Shadow(Color='gray', strength=5, direction=135);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Color='gray', strength=5, direction=135)"; 
+} 
+
+html { }                
+
 body {
-
     font-family: 'Archer', 'HelveticaNeue', Arial, Verdana, sans-serif;
     font-variant: normal;
     font-size: $font_size;
     color: $colour_blue;   
-    background-color: $colour_lightblue;
-          
-
+    background-image: url(/images/bg.jpg);
 }            
 
 a:link, a:visited, a:active {
 	text-decoration: none;
+    border-bottom: $colour_blue dotted 1px; 	
     color: $colour_blue;	
 }
 
 a:hover {
     color: $colour_blue;
-}  
+}              
 
-                        
+a.selected-link {
+    border-bottom: white dotted 1px; 	
+}
+
 $header_height: 100px;
 
-.container {
-    max-width: 80%; 
-    margin: 0 auto; 
-    position: relative;
+.container {                
+    max-width: 800px; 
+    margin: 0 auto;
+    position: relative;          
+    background-color: white;
+    @include shadow(20px);
     
-    .header {                         
+    
+    .header {                          
         position: relative;
         height: $header_height; 
-        /*line-height: $header_height;*/
-        
+                        
         background-color: $colour_blue;
         color: $colour_header_fg;   
         a:link, a:visited, a:active {
@@ -48,26 +67,18 @@ $header_height: 100px;
                                     
         h1 {          
             font-size: $font_size * 3;
-            /*display: block;*/
-            /*padding: 30px 10px;*/
-            
             position: absolute;
             bottom: 0; 
-            left: 10px;          
-            /*float: left;*/
-                        
-             
+            left: 30px;          
         } 
         
         ul.nav {       
             position: absolute;
             bottom: 13px;
-            right:10px;
-            /*float: right;*/
-            /*padding: 55px 10px;*/
+            right:30px;
             li {
                 display: inline;
-                padding: 0 10px;
+                padding: 0 5px;
             }                
             
         }
@@ -75,9 +86,13 @@ $header_height: 100px;
             
     }      
     
-    $front_page_width: 460px;
+    $front_page_width: 460px;     
+    $page_content_width: 550px;
     
-    .content {
+    .content {             
+        
+        margin: 50px auto;  
+        padding-bottom: 50px;
         
         img.front_page {
             
@@ -85,8 +100,6 @@ $header_height: 100px;
             width: $front_page_width;
             height: $front_page_width / 1.6;
             margin: 0 auto;
-            /*padding-top: 10px;*/
-            
             border-bottom: $colour_blue dotted 2px;
             
         }  
@@ -100,8 +113,6 @@ $header_height: 100px;
                 li {
                     padding-bottom: 5px;
                 }           
-                /*margin-bottom: 5px;*/
-                
                 
                 list-style: disc;
                 list-style-position: inside; 
@@ -113,16 +124,92 @@ $header_height: 100px;
         }    
         
         h2 {
-            /*color: red;*/
-        }   
-        
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            font-weight: bold;            
+        }        
+                        
         p {
-            margin-bottom :10px;
+            margin-bottom: 10px;
+        }    
+                           
+        div.page_content {
+            
+            width: $page_content_width;
+            margin: 0px auto;
+                     
+            
+            table {
+                border-spacing: 0px 0px;
+                border-collapse: collapse;  
+                margin-bottom: 20px;
+                
+                tr {
+                    th, td {         
+                        width: 20%;
+                        border: $colour_blue solid 1px;                    
+                    }               
+                    
+                    th {
+                        text-align: center;
+                    }                      
+                    
+                    td {
+                        padding-left: 5px;
+                    } 
+                    
+                }
+                
+            }   
+                    
+            div.location {  
+                position: relative;
+                float: left;
+                padding-bottom: 10px;
+                            
+                div.location-key {
+                    position: relative;   
+                    float: left;
+                    width: 20px;
+                    height: 20px; 
+                    border: $colour_blue solid 1px;
+                }
+                
+                div.location-text {  
+                    width: $page_content_width - 30;
+                    position: relative;   
+                    float: left; 
+                    margin-left: 5px;
+                }
+            }
+            
+            
+            .location-hhh { 
+                background-color: $colour_lightblue;                
+            }
+               
+            
+            .inline_heading {
+                display: inline;
+            }
+                
+            ul.principles {
+                list-style-type: decimal;
+                list-style-position: outside;
+                margin-left: 1.1em;
+                li {
+                    margin-bottom: 10px;
+                }                    
+            }
+        
+        
         }
         
     
     }
-    
     
 }       
 

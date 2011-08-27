@@ -8,7 +8,7 @@
 
     <%= stylesheet_link_tag "reset",
                             "main",
-                            :cache => "cached-main"%>
+                            :cache => "cached-main", :media => ""%>
 
     <!--[if lt IE 8]>
     <%= stylesheet_link_tag "main.lt_ie8.css" %>
@@ -32,15 +32,17 @@
             <% end%>
             
             <ul class="nav">
-                <li><%= link_to "About", :action => :about %></li>
-                <li><%= link_to "Classes", :action => :classes %></li>
-                <li><%= link_to "Contact", :action => :contact %></li>
-            </ul>
+                <li><%= link_to "About", {:action => :about}, :class => (action_name == "about" ? "selected-link" : "") %></li>
+                <li><%= link_to "Classes", {:action => :classes}, :class => (action_name == "classes" ? "selected-link" : "") %></li>
+                <li><%= link_to "Private lessons", {:action => :private_lessons}, :class => (action_name == "private_lessons" ? "selected-link" : "") %></li>
+                <li><%= link_to "Contact", {:action => :contact}, :class => (action_name == "contact" ? "selected-link" : "") %></li>
+            </ul>                          
             
         </div>
 
         <div class="content">
             <%= yield %>
+            
         </div>    
             
         <div  class="footer">
@@ -48,11 +50,14 @@
             
     </div>        
 
+    <br/>
+            
+
 </body>
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+<!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>-->
 
-<%= yield(:footer_scripts) %>
+<%#= yield(:footer_scripts) %>
 
 <% if Rails.env.production? %>
 

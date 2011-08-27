@@ -16,8 +16,13 @@ class PagesController < ApplicationController
   end
 
   def classes
-    
   end 
+  
+  def principles
+  end
+  
+  def private_lessons
+  end
   
   private
 
