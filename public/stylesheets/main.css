@@ -1,7 +1,11 @@
 body {
-  font-family: 'Archer', 'HelveticaNeue', Arial, Verdana, sans-serif;
+  /*font-family: 'Josefin Slab', 'HelveticaNeue', Arial, Verdana, sans-serif;*/
+  font-family: "Courier New", Courier, Monaco, monospace;
+  /*font-family: 'HelveticaNeue', Arial, Verdana, sans-serif;*/
+  /*font-family: "Courier New", Courier, Monaco, monospace;*/
+  letter-spacing: -1px;
   font-variant: normal;
-  font-size: 1.1em;
+  font-size: 1em;
   color: #2f4f82;
   background-image: url(/images/bg.jpg); }
 
@@ -34,7 +38,9 @@ a.selected-link {
     .container .header a:link, .container .header a:visited, .container .header a:active {
       color: white; }
     .container .header h1 {
-      font-size: 3.3em;
+      letter-spacing: -2px;
+      word-spacing: -10px;
+      font-size: 3em;
       position: absolute;
       bottom: 0;
       left: 30px; }
@@ -44,7 +50,7 @@ a.selected-link {
       right: 30px; }
       .container .header ul.nav li {
         display: inline;
-        padding: 0 5px; }
+        padding: 0 3px; }
   .container .content {
     margin: 50px auto;
     padding-bottom: 50px; }

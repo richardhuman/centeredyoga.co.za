@@ -1,10 +1,8 @@
 class PagesController < ApplicationController
   
-  class PagesController < ApplicationController
-
   before_filter :set_page_to_render, :set_sub_title
 
-  caches_page :index
+  caches_page :index, :about, :contact, :classes, :principles, :private_lessons
   
   def index
   end
@@ -34,7 +32,5 @@ class PagesController < ApplicationController
       @sub_title = action_name.to_s.capitalize  
     end
 
-
-end
 
 end

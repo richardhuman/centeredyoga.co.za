@@ -1,6 +1,6 @@
 
 
-$font_size: 1.1em;   
+$font_size: 1em;   
                             
 $colour_lightblue: #d5edff; //#c3f3ff;
 $colour_blue: #2F4F82;
@@ -24,12 +24,16 @@ $colour_header_fg: white;
 html { }                
 
 body {
-    font-family: 'Archer', 'HelveticaNeue', Arial, Verdana, sans-serif;
+    /*font-family: 'Josefin Slab', 'HelveticaNeue', Arial, Verdana, sans-serif;*/
+    font-family: "Courier New", Courier, Monaco, monospace;
+    /*font-family: 'HelveticaNeue', Arial, Verdana, sans-serif;*/
+    /*font-family: "Courier New", Courier, Monaco, monospace;*/
+    letter-spacing: -1px;
     font-variant: normal;
     font-size: $font_size;
     color: $colour_blue;   
     background-image: url(/images/bg.jpg);
-}            
+}              
 
 a:link, a:visited, a:active {
 	text-decoration: none;
@@ -48,7 +52,7 @@ a.selected-link {
 $header_height: 100px;
 
 .container {                
-    max-width: 800px; 
+    max-width: 800px;
     margin: 0 auto;
     position: relative;          
     background-color: white;
@@ -65,7 +69,11 @@ $header_height: 100px;
             color: $colour_header_fg;	
         }
                                     
-        h1 {          
+        h1 {           
+            letter-spacing: -2px;
+            word-spacing: -10px;
+            
+            
             font-size: $font_size * 3;
             position: absolute;
             bottom: 0; 
@@ -78,7 +86,7 @@ $header_height: 100px;
             right:30px;
             li {
                 display: inline;
-                padding: 0 5px;
+                padding: 0 3px;
             }                
             
         }
