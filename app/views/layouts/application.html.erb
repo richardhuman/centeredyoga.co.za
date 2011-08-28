@@ -4,9 +4,8 @@
     
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-    <title>Centered Yoga<%= @sub_title.nil? ? "" : " - #{@sub_title}" %></title>
+    <title>Centered Yoga<%= @sub_title.nil? ? "" : " - #{@sub_title.gsub("_", "")}" %></title>
 
-    <link href='http://fonts.googleapis.com/css?family=Judson|Josefin+Slab|Arvo|Rokkitt' rel='stylesheet' type='text/css'>
     <%= stylesheet_link_tag "reset",
                             "main",
                             :cache => "cached-main", :media => ""%>
@@ -56,30 +55,6 @@
 
 </body>
 
-<!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>-->
-
-<%#= yield(:footer_scripts) %>
-
-<% if Rails.env.production? %>
-
-    <script type="text/javascript">
-
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-1383509-2']);
-        _gaq.push(['_trackPageview']);
-
-        (function() {
-            var ga = document.createElement('script');
-            ga.type = 'text/javascript';
-            ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(ga, s);
-        })();
-
-    </script>
-
-<% end %>
 
 </html>
 

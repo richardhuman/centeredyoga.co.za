@@ -76,7 +76,8 @@ a.selected-link {
       font-weight: bold;
       margin-bottom: 10px; }
     .container .content h3 {
-      font-weight: bold; }
+      font-weight: bold;
+      margin-bottom: 5px; }
     .container .content p {
       margin-bottom: 10px; }
     .container .content div.page_content {
@@ -93,21 +94,25 @@ a.selected-link {
           text-align: center; }
         .container .content div.page_content table tr td {
           padding-left: 5px; }
-      .container .content div.page_content div.location {
+      .container .content div.page_content div.locations {
         position: relative;
         float: left;
-        padding-bottom: 10px; }
-        .container .content div.page_content div.location div.location-key {
+        margin-bottom: 30px; }
+        .container .content div.page_content div.locations div.location {
           position: relative;
           float: left;
-          width: 20px;
-          height: 20px;
-          border: #2f4f82 solid 1px; }
-        .container .content div.page_content div.location div.location-text {
-          width: 520px;
-          position: relative;
-          float: left;
-          margin-left: 5px; }
+          padding-bottom: 10px; }
+          .container .content div.page_content div.locations div.location div.location-key {
+            /*position: relative;   */
+            float: left;
+            width: 20px;
+            height: 20px;
+            border: #2f4f82 solid 1px; }
+          .container .content div.page_content div.locations div.location div.location-text {
+            width: 520px;
+            /*position: relative;   */
+            float: left;
+            margin-left: 5px; }
       .container .content div.page_content .location-hhh {
         background-color: #d5edff; }
       .container .content div.page_content .inline_heading {
@@ -115,6 +120,6 @@ a.selected-link {
       .container .content div.page_content ul.principles {
         list-style-type: decimal;
         list-style-position: outside;
-        margin-left: 1.1em; }
+        margin-left: 2em; }
         .container .content div.page_content ul.principles li {
           margin-bottom: 10px; }
