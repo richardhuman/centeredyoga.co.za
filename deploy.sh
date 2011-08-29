@@ -4,4 +4,8 @@ HOST=196.220.57.51
 USER=centeredyogaco95
 PASSWORD=hgh2ihuu919uw
 
-ncftpput -u ${USER} -p ${PASSWORD} -R ${HOST} httpdocs ./public/*
+if [ "$1" == "all" ]; then
+    ncftpput -u ${USER} -p ${PASSWORD} -R ${HOST} httpdocs ./public/*
+else
+    ncftpput -u ${USER} -p ${PASSWORD} ${HOST} httpdocs ./public/*html
+fi
