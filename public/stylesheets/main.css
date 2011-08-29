@@ -30,7 +30,10 @@ a.selected-link {
   -moz-box-shadow: 0 0 20px #888888;
   box-shadow: 0 0 20px #888888;
   filter: progid:DXImageTransform.Microsoft.Shadow(Color='gray', strength=5, direction=135);
-  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Color='gray', strength=5, direction=135)"; }
+  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Color='gray', strength=5, direction=135)";
+  border-radius: 7px;
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px; }
   .container .header {
     position: relative;
     height: 100px;

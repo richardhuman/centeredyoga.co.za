@@ -57,7 +57,8 @@ $header_height: 100px;
     margin: 0 auto;
     position: relative;          
     background-color: white;
-    @include shadow(20px);
+    @include shadow(20px);  
+    @include rounded-corners(7px);
     
     
     .header {                          
