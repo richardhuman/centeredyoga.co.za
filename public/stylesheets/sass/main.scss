@@ -46,7 +46,8 @@ a:hover {
 }              
 
 a.selected-link {
-    border-bottom: white dotted 1px; 	
+    border-bottom: white dotted 1px; 
+    word-spacing: -5px;	
 }
 
 $header_height: 100px;
@@ -83,10 +84,12 @@ $header_height: 100px;
         ul.nav {       
             position: absolute;
             bottom: 13px;
-            right:30px;
+            word-spacing: -5px;
+            right: 30px;
             li {
                 display: inline;
-                padding: 0 3px;
+                padding: 0 5px 0 4px; 
+                
             }                
             
         }

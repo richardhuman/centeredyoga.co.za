@@ -18,7 +18,8 @@ a:hover {
   color: #2f4f82; }
 
 a.selected-link {
-  border-bottom: white dotted 1px; }
+  border-bottom: white dotted 1px;
+  word-spacing: -5px; }
 
 .container {
   max-width: 800px;
@@ -47,10 +48,11 @@ a.selected-link {
     .container .header ul.nav {
       position: absolute;
       bottom: 13px;
+      word-spacing: -5px;
       right: 30px; }
       .container .header ul.nav li {
         display: inline;
-        padding: 0 3px; }
+        padding: 0 5px 0 4px; }
   .container .content {
     margin: 50px auto;
     padding-bottom: 50px; }
