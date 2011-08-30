@@ -21,6 +21,9 @@ a.selected-link {
   border-bottom: white dotted 1px;
   word-spacing: -5px; }
 
+.book-title {
+  font-style: italic; }
+
 .container {
   max-width: 800px;
   margin: 0 auto;

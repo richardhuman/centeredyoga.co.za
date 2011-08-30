@@ -9,4 +9,5 @@ if [ "$1" == "all" ]; then
 else
     ncftpput -u ${USER} -p ${PASSWORD} ${HOST} httpdocs ./public/*html
     ncftpput -u ${USER} -p ${PASSWORD} ${HOST} httpdocs/stylesheets ./public/stylesheets/cached-main.css
+    ncftpput -u ${USER} -p ${PASSWORD} ${HOST} httpdocs ./public/.htaccess
 fi

@@ -50,7 +50,11 @@ a.selected-link {
     word-spacing: -5px;	
 }
 
-$header_height: 100px;
+$header_height: 100px;         
+
+.book-title {
+    font-style: italic;
+}
 
 .container {                
     max-width: 800px;

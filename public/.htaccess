@@ -1,4 +1,9 @@
-#RewriteEngine On
-#RewriteCond %{REQUEST_URI} ! \.html$
-#RewriteCond %{REQUEST_URI} ! /$
-#RewriteRule ^(.*)$ $1.html
+RewriteEngine On
+
+
+RewriteRule ^about$ about.html
+RewriteRule ^contact$ contact.html
+RewriteRule ^classes$ classes.html
+RewriteRule ^index$ index.html
+RewriteRule ^principles$ principles.html
+RewriteRule ^private_lessons$ private_lessons.html
