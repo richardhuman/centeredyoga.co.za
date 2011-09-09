@@ -1,6 +1,29 @@
 RewriteEngine On
 
 
+#######################################################################
+#
+# Canonical host redirects
+#
+#######################################################################
+
+RewriteCond %{HTTP_HOST} ^centeredyoga.co.za$ [NC]
+RewriteRule ^(.*)$ http://www.centeredyoga.co.za/$1 [L,R=301]
+
+RewriteCond %{HTTP_HOST} ^centredyoga.co.za$ [NC]
+RewriteRule ^(.*)$ http://www.centeredyoga.co.za/$1 [L,R=301]
+
+RewriteCond %{HTTP_HOST} ^www.centredyoga.co.za$ [NC]
+RewriteRule ^(.*)$ http://www.centeredyoga.co.za/$1 [L,R=301]
+
+#######################################################################
+#
+# cached pages redirects
+#
+#######################################################################
+
+
+
 RewriteRule ^about$ about.html
 RewriteRule ^contact$ contact.html
 RewriteRule ^classes$ classes.html
