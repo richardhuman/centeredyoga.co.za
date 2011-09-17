@@ -5,6 +5,7 @@ class PagesController < ApplicationController
   caches_page :index, :about, :contact, :classes, :principles, :private_lessons
   
   def index
+    @sub_title = "Cape Town"
   end
 
   def about
