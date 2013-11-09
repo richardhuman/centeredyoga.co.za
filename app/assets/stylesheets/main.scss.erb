@@ -24,15 +24,12 @@ $colour_header_fg: white;
 html { }                
 
 body {
-    /*font-family: 'Josefin Slab', 'HelveticaNeue', Arial, Verdana, sans-serif;*/
     font-family: "Courier New", Courier, Monaco, monospace;
-    /*font-family: 'HelveticaNeue', Arial, Verdana, sans-serif;*/
-    /*font-family: "Courier New", Courier, Monaco, monospace;*/
     letter-spacing: -1px;
     font-variant: normal;
     font-size: $font_size;
     color: $colour_blue;   
-    background-image: image-url('<%= asset_path('bg.jpg') %>');
+    background-image: url('<%= image_path('bg.jpg') %>');
 }              
 
 a:link, a:visited, a:active {
