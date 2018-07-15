@@ -14,7 +14,7 @@ CenterdyogaCoZa::Application.configure do
   #config.action_dispatch.x_sendfile_header = "X-Sendfile"
   config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' # for nginx
 
-  config.serve_static_assets = false
+  config.serve_static_files = false
     
   config.active_support.deprecation = :notify # Send deprecation notices to registered listeners
   config.log_level = :info
@@ -27,7 +27,7 @@ CenterdyogaCoZa::Application.configure do
 
   # Disable Rails's static asset server
   # In production, Apache or nginx will already do this
-  config.serve_static_assets = false
+  config.serve_static_files = false
   
   # Compress JavaScripts and CSS
   
