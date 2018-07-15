@@ -24,7 +24,7 @@
             
             <ul class="nav">
                 <li><%= link_to "About", {:action => :about}, :class => (action_name == "about" ? "selected-link" : "") %></li>
-                <li><%= link_to "Classes", {:action => :classes}, :class => (action_name == "classes" ? "selected-link" : "") %></li>
+<!--                <li><%#= link_to "Classes", {:action => :classes}, :class => (action_name == "classes" ? "selected-link" : "") %></li>-->
                 <li><%= link_to "Private lessons", {:action => :private_lessons}, :class => (action_name == "private_lessons" ? "selected-link" : "") %></li>
                 <li><%= link_to "Contact", {:action => :contact}, :class => (action_name == "contact" ? "selected-link" : "") %></li>
             </ul>                          
